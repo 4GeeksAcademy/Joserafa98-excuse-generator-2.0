@@ -1,1 +1,16 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-image: url(https://www.autopista.es/uploads/s1/94/94/70/7/la-temperatura-en-el-espacio-es-realmente-fria.jpeg);
+  background-repeat: repeat;
+}
+#Generator {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 600px 90%;
+  padding: 20px;
+  margin: 10%;
+  font-size: xx-large;
+  background-color: white;
+  display: block;
+  border-radius: 15px;
+}
