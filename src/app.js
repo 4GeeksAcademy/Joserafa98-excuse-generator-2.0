@@ -18,14 +18,24 @@ window.onload = function() {
       "while"
     ];
 
-    let whoIndex = Mat.floor(Math.random(-1) * who.length);
-    let actionIndex = Mat.floor(Math.random(-1) * action.length);
-    let whatIndex = Mat.floor(Math.random(-1) * what.length);
-    let whenIndex = Mat.floor(Math.random(-1) * when.length);
+    let whoIndex = Math.floor(Math.random(-1) * who.length);
+    let actionIndex = Math.floor(Math.random(-1) * action.length);
+    let whatIndex = Math.floor(Math.random(-1) * what.length);
+    let whenIndex = Math.floor(Math.random(-1) * when.length);
 
     let ExcuseGenerator =
-      who[whoIndex] + action[actionIndex] + what[whatIndex] + when[whenIndex];
+      who[whoIndex] +
+      " " +
+      action[actionIndex] +
+      " " +
+      what[whatIndex] +
+      " " +
+      when[whenIndex];
     return ExcuseGenerator;
   }
-  console.log("Hello Rigo from the console!");
+  document.querySelector("#botonresultado").addEventListener("click", () => {
+    let resultado = document.querySelector("#excuse");
+    resultado.innerHTML = ExcuseGenerator();
+  });
+  console.log();
 };
