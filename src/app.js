@@ -17,25 +17,23 @@ window.onload = function() {
       "during my lunch",
       "while"
     ];
-
-    let whoIndex = Math.floor(Math.random(-1) * who.length);
-    let actionIndex = Math.floor(Math.random(-1) * action.length);
-    let whatIndex = Math.floor(Math.random(-1) * what.length);
-    let whenIndex = Math.floor(Math.random(-1) * when.length);
+    function getElementArray(array) {
+      let resultado = Math.floor(Math.random(-1) * array.length);
+      return resultado;
+    }
 
     let ExcuseGenerator =
-      who[whoIndex] +
+      who[getElementArray(who)] +
       " " +
-      action[actionIndex] +
+      action[getElementArray(action)] +
       " " +
-      what[whatIndex] +
+      what[getElementArray(what)] +
       " " +
-      when[whenIndex];
+      when[getElementArray(when)];
     return ExcuseGenerator;
   }
   document.querySelector("#botonresultado").addEventListener("click", () => {
     let resultado = document.querySelector("#excuse");
     resultado.innerHTML = ExcuseGenerator();
   });
-  console.log();
 };
