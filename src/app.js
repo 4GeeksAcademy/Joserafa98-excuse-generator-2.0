@@ -18,21 +18,21 @@ window.onload = function() {
       "while"
     ];
     function getElementArray(array) {
-      let resultado = Math.floor(Math.random(-1) * array.length);
-      return resultado;
+      let randomElementArray = Math.floor(Math.random(-1) * array.length);
+      return randomElementArray;
     }
 
-    let ExcuseGenerator =
+    return (
       who[getElementArray(who)] +
       " " +
       action[getElementArray(action)] +
       " " +
       what[getElementArray(what)] +
       " " +
-      when[getElementArray(when)];
-    return ExcuseGenerator;
+      when[getElementArray(when)]
+    );
   }
-  document.querySelector("#botonresultado").addEventListener("click", () => {
+  document.querySelector("#resultsbuttom").addEventListener("click", () => {
     let resultado = document.querySelector("#excuse");
     resultado.innerHTML = ExcuseGenerator();
   });
